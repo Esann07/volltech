@@ -1,0 +1,13 @@
+# Never send local runtime data or credentials to the Docker build context.
+.git
+config/db_credentials.php
+data/*.sqlite
+data/*.sqlite-shm
+data/*.sqlite-wal
+data/backups/
+
+# Local/editor artifacts
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
