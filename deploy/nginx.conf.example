@@ -1,0 +1,27 @@
+# VoltTech - example nginx server block (PHP-FPM). Adjust paths and the PHP socket.
+# Apache users do not need this: the bundled .htaccess files do the same job.
+
+server {
+    listen 80;
+    server_name your-domain.com;
+    # After running:  sudo certbot --nginx -d your-domain.com   nginx adds the HTTPS block for you.
+
+    root /var/www/volttech;
+    index index.php;
+
+    # --- never serve private folders, hidden files or database/SQL files ---
+    location ~ (^|/)(config|includes|data|tools|deploy)(/|$) { deny all; return 404; }
+    location ~ /\.                                           { deny all; }
+    location ~* \.(sqlite|sqlite-wal|sqlite-shm|sql|log|bak|md)$ { deny all; }
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php8.2-fpm.sock;   # check the version on your server
+    }
+
+    client_max_body_size 1m;
+}

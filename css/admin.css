@@ -1,0 +1,48 @@
+/* VoltTech Admin console: same design system as the player app with a volt-yellow accent.
+   Loaded AFTER style.css on admin pages only. */
+
+/* =============================================================
+   Admin app variant: same VoltTech system, volt-yellow accent
+   ============================================================= */
+:root {
+    --brand: #eab308;
+    --brand-hover: #facc15;
+    --on-brand: #111827;
+    --brand-soft: rgba(250, 204, 21, 0.12);
+    --brand-glow: rgba(250, 204, 21, 0.3);
+    --link: #facc15;
+    --bg-glow: rgba(250, 204, 21, 0.07);
+    --bg-glow-2: rgba(37, 99, 235, 0.08);
+    --price: #facc15;
+}
+html[data-theme="light"] {
+    --brand: #b45309;
+    --brand-hover: #92400e;
+    --on-brand: #ffffff;
+    --brand-soft: rgba(180, 83, 9, 0.1);
+    --brand-glow: rgba(180, 83, 9, 0.25);
+    --link: #92400e;
+    --bg-glow: rgba(250, 204, 21, 0.1);
+}
+.brand-mark {
+    background: linear-gradient(135deg, #facc15, #f59e0b);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12) inset, 0 6px 18px rgba(250, 204, 21, 0.3);
+}
+.brand-mark .icon { fill: #111827; stroke: #111827; }
+.avatar { background: linear-gradient(135deg, #f59e0b, #ef4444); }
+.bar-fill { background: linear-gradient(90deg, var(--brand), #fb923c); }
+.stat-icon { color: var(--link); }
+.auth-hero {
+    background:
+        radial-gradient(520px 340px at 85% 8%, rgba(250, 204, 21, 0.2), transparent 65%),
+        radial-gradient(480px 360px at 5% 100%, rgba(245, 158, 11, 0.28), transparent 65%),
+        linear-gradient(160deg, #0d1226, #121a36 60%, #1a1f3a);
+}
+.auth-hero .brand-name span { color: #fde047; }
+.auth-features .icon-tile { color: #fde047; }
+
+/* The admin dashboard shows 7 statistics: on wide screens use 4 columns so the rows balance as 4 + 3
+   (narrower screens keep the flexible auto-fit grid from style.css). */
+@media (min-width: 1100px) {
+    .stat-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}

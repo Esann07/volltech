@@ -1,0 +1,32 @@
+# VoltTech - root .htaccess (Apache / XAMPP / most shared hosting)
+# If your host answers "500 Internal Server Error" because of this file,
+# see README -> Troubleshooting.
+
+Options -Indexes
+DirectoryIndex index.php
+
+# Never serve database files, SQL dumps, logs or backups, wherever they end up.
+<FilesMatch "\.(sqlite|sqlite-wal|sqlite-shm|sql|log|bak)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Baseline security headers for static files too (PHP pages send their own, incl. CSP).
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# --- HTTPS ---
+# Easiest: set 'force_https' => true in config/db_credentials.php (works everywhere).
+# Alternative at the Apache level - uncomment once your SSL certificate works:
+#
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

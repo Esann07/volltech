@@ -1,0 +1,529 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "Sano",
+            "password_hash": "$2y$10$xNi9jGF\/LWyIlxTecBt52.U2igVn2UtQmhjAgDavPwYPbVPJ1a3Lm",
+            "role": "hero",
+            "credits": 500,
+            "max_energy": 100,
+            "current_energy": 100,
+            "created_at": "2026-09-30 07:30:02",
+            "api_token": null
+        },
+        {
+            "id": 2,
+            "username": "gwapo",
+            "password_hash": "$2y$10$5k5jk03E9bT7Qcv69kwM3OH7nIZwoThht.Motdg\/kss5pake70hjG",
+            "role": "civilian",
+            "credits": 925,
+            "max_energy": 100,
+            "current_energy": 100,
+            "created_at": "2026-09-30 14:19:48",
+            "api_token": null
+        },
+        {
+            "id": 3,
+            "username": "Esan",
+            "password_hash": "$2y$10$0b1V6ROGR1u0Nny.fCQNFO1LzXEmzWn9V2tvV3aurbYVGPQGQx2HO",
+            "role": "admin",
+            "credits": 49190,
+            "max_energy": 100,
+            "current_energy": 78,
+            "created_at": "2026-09-30 14:21:20",
+            "api_token": null
+        },
+        {
+            "id": 4,
+            "username": "San",
+            "password_hash": "$2y$10$DGYgFQvlaII7jFVZ2BrU4ObwHaCKMip..N4HCvtsx3ORczDv\/edbm",
+            "role": "civilian",
+            "credits": 500,
+            "max_energy": 100,
+            "current_energy": 100,
+            "created_at": "2026-10-04 13:10:58",
+            "api_token": null
+        },
+        {
+            "id": 5,
+            "username": "Essan",
+            "password_hash": "$2y$10$u8PIvi4RsQtggj5iA7hOweo3AUrJIZ0Nh59h\/q489ZwJHfzUbcFPy",
+            "role": "villain",
+            "credits": 5000,
+            "max_energy": 100,
+            "current_energy": 100,
+            "created_at": "2026-10-05 04:37:42",
+            "api_token": null
+        },
+        {
+            "id": 6,
+            "username": "Jessan",
+            "password_hash": "$2y$10$RAraSWBdnhoU.puLOwzL3Ol\/uNxhXwOhBAMMhYrZ2ETMNnDCnBtWS",
+            "role": "admin",
+            "credits": 898970,
+            "max_energy": 100,
+            "current_energy": 51,
+            "created_at": "2026-10-05 04:49:25",
+            "api_token": null
+        },
+        {
+            "id": 7,
+            "username": "Poge",
+            "password_hash": "$2y$10$HG7FZGmyn8Ghz48szVVMdOVnky7fsR6Mq\/heHGykp3RKxlMODzzti",
+            "role": "civilian",
+            "credits": 500,
+            "max_energy": 100,
+            "current_energy": 100,
+            "created_at": "2026-10-08 23:39:35",
+            "api_token": null
+        },
+        {
+            "id": 8,
+            "username": "Egop",
+            "password_hash": "$2y$10$cyjGNFVwILYP0T5\/RpvcvuB.Iz1fPDdk9oL8exDBxyNQUVfnb7rJu",
+            "role": "hero",
+            "credits": 500,
+            "max_energy": 100,
+            "current_energy": 100,
+            "created_at": "2026-10-09 00:48:43",
+            "api_token": null
+        }
+    ],
+    "gear": [
+        {
+            "id": 1,
+            "name": "Kinetic Weave Suit",
+            "category": "suit",
+            "description": "Full-body suit that redistributes impact force. Reduces damage taken in combat.",
+            "price": 220,
+            "energy_cost": 15,
+            "power_rating": 78,
+            "icon": ""
+        },
+        {
+            "id": 2,
+            "name": "Thermal Flux Jacket",
+            "category": "suit",
+            "description": "Regulates body heat for fire\/ice-based powers, preventing energy overdraw.",
+            "price": 180,
+            "energy_cost": 10,
+            "power_rating": 65,
+            "icon": ""
+        },
+        {
+            "id": 3,
+            "name": "Nano-Plating Armor",
+            "category": "suit",
+            "description": "Self-repairing armor plates woven with power-conductive nanofiber.",
+            "price": 340,
+            "energy_cost": 22,
+            "power_rating": 90,
+            "icon": ""
+        },
+        {
+            "id": 4,
+            "name": "Null Cuffs",
+            "category": "dampener",
+            "description": "Wrist restraints that suppress offensive powers by up to 80%. Standard issue for containment units.",
+            "price": 150,
+            "energy_cost": 5,
+            "power_rating": 60,
+            "icon": ""
+        },
+        {
+            "id": 5,
+            "name": "Signal Collar",
+            "category": "dampener",
+            "description": "Neck-worn device that mutes telepathic and telekinetic broadcasts in a 10m radius.",
+            "price": 200,
+            "energy_cost": 8,
+            "power_rating": 55,
+            "icon": ""
+        },
+        {
+            "id": 6,
+            "name": "Overload Choker",
+            "category": "dampener",
+            "description": "Emergency dampener that forcibly caps energy output to prevent self-harm from overdraw.",
+            "price": 260,
+            "energy_cost": 12,
+            "power_rating": 70,
+            "icon": ""
+        },
+        {
+            "id": 7,
+            "name": "Grapple Gauntlets",
+            "category": "gadget",
+            "description": "Wrist-mounted grapple line launcher, useful for both heroes and villains on the move.",
+            "price": 95,
+            "energy_cost": 4,
+            "power_rating": 40,
+            "icon": ""
+        },
+        {
+            "id": 8,
+            "name": "Bio-Energy Cell",
+            "category": "gadget",
+            "description": "Portable rechargeable cell that stores excess bio-energy for later use.",
+            "price": 130,
+            "energy_cost": 0,
+            "power_rating": 50,
+            "icon": ""
+        },
+        {
+            "id": 9,
+            "name": "Signal Jammer Disc",
+            "category": "gadget",
+            "description": "Throwable disc that disrupts nearby comms and tracking devices for 60 seconds.",
+            "price": 75,
+            "energy_cost": 6,
+            "power_rating": 35,
+            "icon": ""
+        },
+        {
+            "id": 10,
+            "name": "Adaptive Visor",
+            "category": "gadget",
+            "description": "HUD visor that reads opponents' power signatures in real time.",
+            "price": 210,
+            "energy_cost": 9,
+            "power_rating": 72,
+            "icon": ""
+        }
+    ],
+    "inventory": [
+        {
+            "id": 1,
+            "user_id": 3,
+            "gear_id": 3,
+            "equipped": 1,
+            "acquired_at": "2026-09-30 14:26:02"
+        },
+        {
+            "id": 2,
+            "user_id": 3,
+            "gear_id": 6,
+            "equipped": 0,
+            "acquired_at": "2026-09-30 14:26:22"
+        },
+        {
+            "id": 3,
+            "user_id": 3,
+            "gear_id": 10,
+            "equipped": 0,
+            "acquired_at": "2026-09-30 14:26:47"
+        },
+        {
+            "id": 4,
+            "user_id": 2,
+            "gear_id": 3,
+            "equipped": 1,
+            "acquired_at": "2026-09-30 14:31:51"
+        },
+        {
+            "id": 5,
+            "user_id": 6,
+            "gear_id": 6,
+            "equipped": 1,
+            "acquired_at": "2026-10-05 13:02:13"
+        },
+        {
+            "id": 6,
+            "user_id": 6,
+            "gear_id": 3,
+            "equipped": 0,
+            "acquired_at": "2026-10-05 13:02:16"
+        },
+        {
+            "id": 7,
+            "user_id": 6,
+            "gear_id": 10,
+            "equipped": 1,
+            "acquired_at": "2026-10-05 13:02:22"
+        },
+        {
+            "id": 8,
+            "user_id": 6,
+            "gear_id": 1,
+            "equipped": 0,
+            "acquired_at": "2026-10-08 05:50:15"
+        },
+        {
+            "id": 9,
+            "user_id": 2,
+            "gear_id": 9,
+            "equipped": 0,
+            "acquired_at": "2026-10-09 03:51:23"
+        }
+    ],
+    "energy_logs": [
+        {
+            "id": 1,
+            "user_id": 6,
+            "change_amount": -58,
+            "reason": "Sparring session",
+            "created_at": "2026-10-09 03:32:25"
+        },
+        {
+            "id": 2,
+            "user_id": 6,
+            "change_amount": 40,
+            "reason": "[Admin] Ayaw pag palabi dong",
+            "created_at": "2026-10-09 03:37:11"
+        },
+        {
+            "id": 3,
+            "user_id": 2,
+            "change_amount": -21,
+            "reason": "Sparring session",
+            "created_at": "2026-10-09 03:46:36"
+        },
+        {
+            "id": 4,
+            "user_id": 2,
+            "change_amount": -20,
+            "reason": "[Admin] Sheshh palabi man ka busengg",
+            "created_at": "2026-10-09 03:48:29"
+        },
+        {
+            "id": 5,
+            "user_id": 2,
+            "change_amount": 53,
+            "reason": "[Admin] hahays",
+            "created_at": "2026-10-09 03:50:22"
+        },
+        {
+            "id": 6,
+            "user_id": 3,
+            "change_amount": -22,
+            "reason": "Overload chocker use",
+            "created_at": "2026-10-09 04:06:51"
+        },
+        {
+            "id": 7,
+            "user_id": 6,
+            "change_amount": -21,
+            "reason": "Sparring session",
+            "created_at": "2026-10-09 06:59:16"
+        },
+        {
+            "id": 8,
+            "user_id": 6,
+            "change_amount": -10,
+            "reason": "[Admin] Sheshh palabi man ka busengg",
+            "created_at": "2026-10-09 07:00:07"
+        }
+    ],
+    "admin_audit_log": [
+        {
+            "id": 1,
+            "admin_id": 6,
+            "action": "login",
+            "target": "Jessan",
+            "created_at": "2026-10-05 05:14:39"
+        },
+        {
+            "id": 2,
+            "admin_id": 6,
+            "action": "logout",
+            "target": "Jessan",
+            "created_at": "2026-10-05 05:16:46"
+        },
+        {
+            "id": 3,
+            "admin_id": 3,
+            "action": "login",
+            "target": "Esan",
+            "created_at": "2026-10-05 05:16:49"
+        },
+        {
+            "id": 4,
+            "admin_id": 3,
+            "action": "logout",
+            "target": "Esan",
+            "created_at": "2026-10-05 05:16:54"
+        },
+        {
+            "id": 5,
+            "admin_id": 3,
+            "action": "login",
+            "target": "Esan",
+            "created_at": "2026-10-05 05:17:04"
+        },
+        {
+            "id": 6,
+            "admin_id": 6,
+            "action": "login",
+            "target": "Jessan",
+            "created_at": "2026-10-05 12:47:11"
+        },
+        {
+            "id": 7,
+            "admin_id": 6,
+            "action": "login",
+            "target": "Jessan",
+            "created_at": "2026-10-07 03:55:45"
+        },
+        {
+            "id": 8,
+            "admin_id": 3,
+            "action": "login",
+            "target": "Esan",
+            "created_at": "2026-10-07 10:32:54"
+        },
+        {
+            "id": 9,
+            "admin_id": 3,
+            "action": "login",
+            "target": "Esan",
+            "created_at": "2026-10-08 02:27:37"
+        },
+        {
+            "id": 10,
+            "admin_id": 6,
+            "action": "login",
+            "target": "Jessan",
+            "created_at": "2026-10-08 23:37:00"
+        },
+        {
+            "id": 11,
+            "admin_id": 6,
+            "action": "login",
+            "target": "Jessan",
+            "created_at": "2026-10-09 00:09:08"
+        },
+        {
+            "id": 12,
+            "admin_id": 6,
+            "action": "update_user",
+            "target": "user #5 (Essan): credits 500 -> 5000",
+            "created_at": "2026-10-09 00:24:31"
+        },
+        {
+            "id": 13,
+            "admin_id": 6,
+            "action": "login",
+            "target": "Jessan",
+            "created_at": "2026-10-09 01:18:05"
+        },
+        {
+            "id": 14,
+            "admin_id": 6,
+            "action": "login",
+            "target": "Jessan",
+            "created_at": "2026-10-09 03:33:38"
+        },
+        {
+            "id": 15,
+            "admin_id": 6,
+            "action": "adjust_energy",
+            "target": "40 to Jessan (Ayaw pag palabi dong)",
+            "created_at": "2026-10-09 03:37:11"
+        },
+        {
+            "id": 16,
+            "admin_id": 6,
+            "action": "update_user",
+            "target": "user #2 (gwapo): credits 10 -> 1000",
+            "created_at": "2026-10-09 03:44:30"
+        },
+        {
+            "id": 17,
+            "admin_id": 6,
+            "action": "adjust_energy",
+            "target": "-20 to gwapo (Sheshh palabi man ka busengg)",
+            "created_at": "2026-10-09 03:48:29"
+        },
+        {
+            "id": 18,
+            "admin_id": 6,
+            "action": "logout",
+            "target": "Jessan",
+            "created_at": "2026-10-09 03:48:40"
+        },
+        {
+            "id": 19,
+            "admin_id": 6,
+            "action": "login",
+            "target": "Jessan",
+            "created_at": "2026-10-09 03:49:51"
+        },
+        {
+            "id": 20,
+            "admin_id": 6,
+            "action": "adjust_energy",
+            "target": "53 to gwapo (hahays)",
+            "created_at": "2026-10-09 03:50:22"
+        },
+        {
+            "id": 21,
+            "admin_id": 6,
+            "action": "logout",
+            "target": "Jessan",
+            "created_at": "2026-10-09 03:52:21"
+        },
+        {
+            "id": 22,
+            "admin_id": 3,
+            "action": "login",
+            "target": "Esan",
+            "created_at": "2026-10-09 03:52:23"
+        },
+        {
+            "id": 23,
+            "admin_id": 3,
+            "action": "login",
+            "target": "Esan",
+            "created_at": "2026-10-09 04:30:18"
+        },
+        {
+            "id": 24,
+            "admin_id": 6,
+            "action": "login",
+            "target": "Jessan",
+            "created_at": "2026-10-09 06:14:14"
+        },
+        {
+            "id": 25,
+            "admin_id": 6,
+            "action": "adjust_energy",
+            "target": "-10 to Jessan (Sheshh palabi man ka busengg)",
+            "created_at": "2026-10-09 07:00:07"
+        },
+        {
+            "id": 26,
+            "admin_id": 6,
+            "action": "login",
+            "target": "Jessan",
+            "created_at": "2026-10-09 08:17:06"
+        },
+        {
+            "id": 27,
+            "admin_id": 6,
+            "action": "login",
+            "target": "Jessan",
+            "created_at": "2026-10-09 09:43:09"
+        },
+        {
+            "id": 28,
+            "admin_id": 3,
+            "action": "login",
+            "target": "Esan",
+            "created_at": "2026-10-09 10:18:50"
+        }
+    ],
+    "login_attempts": [
+        {
+            "id": 1,
+            "scope": "register",
+            "ip": "::1",
+            "attempted_at": 1791502775
+        },
+        {
+            "id": 2,
+            "scope": "register",
+            "ip": "::1",
+            "attempted_at": 1791506924
+        }
+    ]
+}
