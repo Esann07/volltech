@@ -1,7 +1,9 @@
 # Render deploy image for VoltTech (PHP + Apache).
 FROM php:8.3-apache
 
-RUN docker-php-ext-install pdo_sqlite \
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends libsqlite3-dev \
+    && docker-php-ext-install pdo_sqlite pdo_mysql \
     && a2enmod headers rewrite \
     && printf '%s\n' \
         '<Directory /var/www/html>' \
@@ -9,7 +11,8 @@ RUN docker-php-ext-install pdo_sqlite \
         '    Require all granted' \
         '</Directory>' \
         > /etc/apache2/conf-available/volttech.conf \
-    && a2enconf volttech
+    && a2enconf volttech \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /var/www/html
 COPY . .
