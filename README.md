@@ -129,11 +129,10 @@ Set `sqlite_path` to `/var/lib/volttech/powerforge.sqlite` and `force_https` to 
 This is a PHP application, so it does **not** need a `package.json`, `npm install`, or a Node build command. Render runs it from the included `Dockerfile` instead.
 
 1. Push this folder to a GitHub or GitLab repository. Do not commit `config/db_credentials.php` or `data/powerforge.sqlite`.
-2. In Render, select **New → Blueprint**, connect the repository, and deploy the detected `render.yaml`. It creates a Docker web service and a 1 GB persistent disk at `/var/lib/volttech`.
-3. Choose a paid plan: Render persistent disks are not available on its free web-service plan. The disk is essential because Render's normal filesystem is erased on deploy/restart.
-4. Open the generated `https://…onrender.com` URL. On the first start, VoltTech creates its starter SQLite database on the disk.
+2. In Render, select **New → Blueprint**, connect the repository, and deploy the detected `render.yaml`. It creates a free Docker web service.
+3. Open the generated `https://…onrender.com` URL. On the first start, VoltTech creates its starter SQLite database.
 
-For existing data, copy `powerforge.sqlite` to `/var/lib/volttech/powerforge.sqlite` on the attached Render disk **before** inviting users. Back it up first. Do not place the database in the repository or under the web root.
+> **Free-tier limit:** Render's filesystem is temporary, so its SQLite database is deleted when the service restarts or redeploys. The free plan is suitable only for a demo. For real accounts or data, use a paid persistent disk or move the app to an external MySQL database.
 
 The Docker image supplies the required `pdo_sqlite` extension, Apache rewrite support, and listens on Render's assigned `PORT`. You do not need to add a Build Command or Start Command in the Render dashboard.
 

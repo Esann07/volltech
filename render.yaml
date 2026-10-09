@@ -2,9 +2,5 @@ services:
   - type: web
     name: volttech
     runtime: docker
-    plan: starter
+    plan: free
     healthCheckPath: /
-    disk:
-      name: volttech-data
-      mountPath: /var/lib/volttech
-      sizeGB: 1

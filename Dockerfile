@@ -14,10 +14,9 @@ RUN docker-php-ext-install pdo_sqlite \
 WORKDIR /var/www/html
 COPY . .
 
-# The Render blueprint mounts its persistent disk here. The application uses
-# config/render_db_credentials.php to keep its SQLite database on that disk.
-RUN mkdir -p /var/lib/volttech \
-    && chown -R www-data:www-data /var/lib/volttech
+# The free Render plan uses the container's temporary filesystem. Apache must
+# be able to create the fresh SQLite file in data/ at startup.
+RUN chown -R www-data:www-data /var/www/html/data
 
 ENV VOLTTECH_CONFIG=/var/www/html/config/render_db_credentials.php
 EXPOSE 10000
