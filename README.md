@@ -136,6 +136,17 @@ This is a PHP application, so it does **not** need a `package.json`, `npm instal
 
 The Docker image supplies the required `pdo_sqlite` extension, Apache rewrite support, and listens on Render's assigned `PORT`. You do not need to add a Build Command or Start Command in the Render dashboard.
 
+#### First Render admin account
+
+The database on a new Render deploy has no users. In the Web Service's **Environment** settings, add these secret environment variables, then choose **Save and deploy**:
+
+| Key | Value |
+|---|---|
+| `VOLTTECH_ADMIN_USERNAME` | Your desired admin username (3–30 letters, numbers, `.`, `_`, or `-`) |
+| `VOLTTECH_ADMIN_PASSWORD` | A new password, 8–72 characters |
+
+At startup the container creates that user as an administrator. Visit `/admin/` and log in with those values. On later deploys it only ensures this user remains an admin; it never changes the password. Remove both variables after the first successful login if you no longer need the bootstrap behaviour.
+
 ### Go-live checklist
 
 - [ ] `https://` works (padlock) and `'force_https' => true`
